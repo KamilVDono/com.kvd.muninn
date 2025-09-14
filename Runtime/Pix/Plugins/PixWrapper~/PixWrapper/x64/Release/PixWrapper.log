@@ -1,7 +1,0 @@
-﻿  PixWrapper.cpp
-     Creating library ..\PixWrapper.lib and object ..\PixWrapper.exp
-  Generating code
-  Previous IPDB was built with incompatible compiler, fall back to full compilation.
-  All 27 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  PixWrapper.vcxproj -> C:\CData\Projects\UniversalProfilerMarker\Packages\com.kvd.muninn\Runtime\Pix\Plugins\PixWrapper.dll

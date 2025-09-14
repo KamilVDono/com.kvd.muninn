@@ -1,2 +1,0 @@
-C:\Devs\Projects\PixWrapper\x64\Release\WinPixEventRuntime.dll
-C:\CData\Projects\UniversalProfilerMarker\Packages\com.kvd.muninn\Runtime\Pix\Plugins\WinPixEventRuntime.dll
