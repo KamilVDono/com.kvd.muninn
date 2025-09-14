@@ -16,6 +16,25 @@ namespace KVD.Muninn.Editor
 		};
 
 		Vector2 _instrumentationScroll;
+		GUIStyle _titleStyle;
+
+		GUIStyle TitleStyle
+		{
+			get
+			{
+				if (_titleStyle == null)
+				{
+					_titleStyle = new GUIStyle(EditorStyles.boldLabel)
+					{
+						alignment = TextAnchor.MiddleCenter,
+						fontStyle = FontStyle.Bold,
+						fontSize = 20,
+					};
+				}
+
+				return _titleStyle;
+			}
+		}
 
 		[MenuItem("Window/Analysis/Muninn Settings", false, 11)]
 		static void ShowWindow()
@@ -30,8 +49,7 @@ namespace KVD.Muninn.Editor
 			var settings = MuninnSettings.Instance;
 			var serializedSettings = new SerializedObject(settings);
 
-			EditorGUILayout.LabelField("Muninn Settings", EditorStyles.boldLabel);
-			EditorGUILayout.Space();
+			EditorGUILayout.LabelField("Muninn Settings", TitleStyle);
 
 			serializedSettings.Update();
 
