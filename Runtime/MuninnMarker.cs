@@ -1,7 +1,7 @@
-#if (UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_GAMECORE)
+#if (UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || UNITY_GAMECORE) && !PIX_DISABLED
 #define PIX_AVAILABLE
 #endif
-#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_GAMECORE || UNITY_PS5
+#if (UNITY_EDITOR || UNITY_STANDALONE || UNITY_GAMECORE || UNITY_PS5) && !SUPERLUMINAL_DISABLED
 #define SUPERLUMINAL_AVAILABLE
 #endif
 #if (PIX_AVAILABLE || SUPERLUMINAL_AVAILABLE) && (DEBUG || MUNINN_ENABLED || UNITY_EDITOR)
@@ -71,7 +71,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void Begin()
 		{
@@ -88,7 +88,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void End()
 		{
@@ -105,7 +105,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void SetMarker()
 		{
@@ -123,7 +123,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void ReportCounter(float value)
 		{
@@ -141,7 +141,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void Begin(float value)
 		{
@@ -158,7 +158,7 @@ namespace KVD.Muninn
 #endif
 		}
 
-		[Conditional("MUNINN_ENABLE"), Conditional("DEBUG")]
+		[Conditional("MUNINN_ENABLED"), Conditional("DEBUG")]
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public void Begin(int value)
 		{
